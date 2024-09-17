@@ -1,4 +1,4 @@
-# Archlinux Config
+# Fedora Config
 
 ## Package List
 
@@ -23,7 +23,7 @@ picom
 Required: networkmanager, bluez
 
 ```
-pacman -S networkmanager bluez bluez-utils
+dnf install networkmanager bluez bluez-utils
 ```
 
 ```
@@ -42,7 +42,7 @@ stow .
 ### Neovim
 
 ```
-pacman -S neovim
+dnf install neovim
 ```
 
 Config: gets installed automatically on opening neovim the next time if dotfiles have been imported
@@ -52,7 +52,7 @@ Config: gets installed automatically on opening neovim the next time if dotfiles
 Required: dwm, dmenu, slstatus, st, lxsession/xfce-polkit, nm-applet, blueman-applet
 
 ```
-pacman -S lxsession network-manager-applet blueman
+dnf install lxsession network-manager-applet blueman
 ```
 
 ```
@@ -69,7 +69,8 @@ cd
 Required: sxhkd, brillo
 
 ```
-pacman -S sxhkd brillo
+dnf copr enable leloubil/brillo
+dnf isntall sxhkd brillo
 ```
 
 Config: imported by default
@@ -77,7 +78,7 @@ Config: imported by default
 ### Tmux
 
 ```
-pacman -S tmux
+dnf install tmux
 ```
 
 TPM:
